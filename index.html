@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة وليد الإسلامية</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>منصة وليد الإسلامية</h1>
+        <nav>
+            <a href="#home">الصفحة الرئيسية</a>
+            <a href="#calculator">آلة حاسبة</a>
+            <a href="#islamic-counters">عدادات إسلامية</a>
+            <a href="#morning-dhikr">أذكار الصباح</a>
+            <a href="#quotes">اقتباسات</a>
+            <a href="#calendar">التقويم الهجري</a>
+            <a href="#prayer-times">مواقيت الصلاة</a>
+            <a href="#calligraphy">الخط العربي</a>
+            <a href="#islamic-games">الألعاب الإسلامية</a>
+            <a href="#contact">تواصل معنا</a>
+            <a href="#about">من نحن</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>مرحبا بك في منصة وليد الإسلامية</h2>
+            <p>بسم الله الرحمن الرحيم</p>
+            <p>منصة وليد الإسلامية تهدف إلى توفير محتوى ديني وتعليمي مميز يساعد المسلمين في حياتهم اليومية وفي التزود للآخرة.</p>
+        </section>
+
+        <section id="calculator">
+            <h2>آلة وليد الحسابية</h2>
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendDisplay('7')">7</button>
+                    <button onclick="appendDisplay('8')">8</button>
+                    <button onclick="appendDisplay('9')">9</button>
+                    <button onclick="appendDisplay('/')">/</button>
+                    <button onclick="appendDisplay('4')">4</button>
+                    <button onclick="appendDisplay('5')">5</button>
+                    <button onclick="appendDisplay('6')">6</button>
+                    <button onclick="appendDisplay('*')">*</button>
+                    <button onclick="appendDisplay('1')">1</button>
+                    <button onclick="appendDisplay('2')">2</button>
+                    <button onclick="appendDisplay('3')">3</button>
+                    <button onclick="appendDisplay('-')">-</button>
+                    <button onclick="appendDisplay('0')">0</button>
+                    <button onclick="appendDisplay('.')">.</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="appendDisplay('+')">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="islamic-counters">
+            <h2>عدادات إسلامية</h2>
+            <div class="counter-container">
+                <div class="counter" id="counter1" onclick="decreaseCounter('counter1')">
+                    <span class="count">33</span>
+                    <span class="label">سبحان الله</span>
+                </div>
+                <div class="counter middle-counter" id="counter2" onclick="decreaseCounter('counter2')">
+                    <span class="count">33</span>
+                    <span class="label">الحمد لله</span>
+                </div>
+                <div class="counter" id="counter3" onclick="decreaseCounter('counter3')">
+                    <span class="count">34</span>
+                    <span class="label">الله أكبر</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="morning-dhikr">
+            <h2>ذكر عام</h2>
+            <div class="dhikr-container">
+                <div class="dhikr-counter" id="morning-dhikr-counter">
+                    <div class="dhikr-content">
+                        <span class="dhikr-count" id="dhikr-count">0</span>
+                        <span class="dhikr-text">استغفر الله و الحمدلله و الله اكبر و لا اله الا الله</span>
+                    </div>
+                    <button onclick="increaseDhikrCount()">زيادة</button>
+                </div>
+                <p id="dhikr-details">
+                    عدد الأذكار: <span id="dhikr-number">0</span> / 33
+                </p>
+            </div>
+        </section>
+
+        <section id="quotes">
+            <h2>اقتباسات دينية</h2>
+            <div id="quote">قال رسول الله صلى الله عليه وسلم: "خيركم من تعلم القرآن وعلمه."</div>
+        </section>
+
+        <section id="calendar">
+            <h2>التقويم الهجري</h2>
+            <div id="hijri-calendar">جاري تحميل التاريخ الهجري...</div>
+        </section>
+
+        <section id="prayer-times">
+            <h2>مواقيت الصلاة</h2>
+            <div id="prayer-times">
+                <div id="fajr-time">الفجر: جارٍ التحميل...</div>
+                <div id="shurouk-time">الفجر: جارٍ التحميل...</div>
+                <div id="dhuhr-time">الظهر: جارٍ التحميل...</div>
+                <div id="asr-time">العصر: جارٍ التحميل...</div>
+                <div id="maghrib-time">المغرب: جارٍ التحميل...</div>
+                <div id="isha-time">العشاء: جارٍ التحميل...</div>
+            </div>
+        </section>
+
+        <section id="calligraphy">
+           <h2>اية اليوم</h2>
+            <canvas id="calligraphy-canvas" width="600" height="300"></canvas>
+        </section>
+
+        <main>
+            <!-- Existing sections -->
+    
+            <section id="islamic-games">
+                <h2>الألعاب الإسلامية</h2>
+                <div class="game-container">
+                    <p id="question">ما هو اسم النبي الذي ابتلعه الحوت؟</p>
+                    <input type="text" id="user-answer" placeholder="أدخل الإجابة هنا">
+                    <button onclick="checkAnswer()">تحقق الإجابة</button>
+                    <p id="feedback" class="feedback"></p>
+                </div>
+            </section>
+    
+            <!-- Other existing sections -->
+        </main>
+
+
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <p>للتواصل معنا، يرجى إرسال بريد إلكتروني إلى: <a href="oualeedkhanouche@gmail.com">oualeedkhanouche@gmail.com</a></p>
+        </section>
+
+        <section id="about">
+            <h2>من نحن</h2>
+            <p>مجرد شاب مسلم جاهل يسعى للمعرفة و العلم و أيضا كسب رضا الله جل جلاله</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 منصة وليد الإسلامية. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
