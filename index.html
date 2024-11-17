@@ -1,36 +1,113 @@
 <!DOCTYPE html>
 <html lang="ar">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة وليد الإسلامية</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: url('https://assets.onecompiler.app/42sahhp72/42sahecw8/hack.jpg') no-repeat center center;
+            background-size: cover;
+            animation: oceanMove 60s linear infinite;
+        }
+
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+
+        .text {
+            position: relative;
+            font-size: 3em;
+            color: red;
+            text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red;
+            animation: glow 1.5s infinite, glitch 3s infinite;
+            z-index: 2;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 25px red, 0 0 30px red; }
+            50% { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red; }
+            100% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-5px, -5px); }
+            40% { transform: translate(5px, 5px); }
+            60% { transform: translate(-5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes oceanMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            color: white;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>منصة وليد الإسلامية</h1>
-        <nav>
-            <a href="#home">الصفحة الرئيسية</a>
-            <a href="#calculator">آلة حاسبة</a>
-            <a href="#islamic-counters">عدادات إسلامية</a>
-            <a href="#morning-dhikr">أذكار الصباح</a>
-            <a href="#quotes">اقتباسات</a>
-            <a href="#calendar">التقويم الهجري</a>
-            <a href="#prayer-times">مواقيت الصلاة</a>
-            <a href="#calligraphy">الخط العربي</a>
-            <a href="#islamic-games">الألعاب الإسلامية</a>
-            <a href="#contact">تواصل معنا</a>
-            <a href="#about">من نحن</a>
-        </nav>
-    </header>
+    <div class="background-blur"></div>
+    <div class="text">
+        Hacked by 0xCrypticPwn3r
+    </div>
+
     <main>
         <section id="home">
             <h2>مرحبا بك في منصة وليد الإسلامية</h2>
             <p>بسم الله الرحمن الرحيم</p>
             <p>منصة وليد الإسلامية تهدف إلى توفير محتوى ديني وتعليمي مميز يساعد المسلمين في حياتهم اليومية وفي التزود للآخرة.</p>
         </section>
+
         <section id="calculator">
             <h2>آلة وليد الحسابية</h2>
             <div class="calculator">
@@ -56,6 +133,7 @@
                 </div>
             </div>
         </section>
+
         <section id="islamic-counters">
             <h2>عدادات إسلامية</h2>
             <div class="counter-container">
@@ -73,81 +151,16 @@
                 </div>
             </div>
         </section>
-    <title>Hacked by 0xCrypticPwn3r</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            background: url('https://assets.onecompiler.app/42sahhp72/42sahecw8/hack.jpg') no-repeat center center;
-            background-size: cover;
-            animation: oceanMove 60s linear infinite; /* Adjusted for smoother movement */
-        }
-
-        <section id="morning-dhikr">
-            <h2>ذكر عام</h2>
-            <div class="dhikr-container">
-                <div class="dhikr-counter" id="morning-dhikr-counter">
-                    <div class="dhikr-content">
-                        <span class="dhikr-count" id="dhikr-count">0</span>
-                        <span class="dhikr-text">استغفر الله و الحمدلله و الله اكبر و لا اله الا الله</span>
-                    </div>
-                    <button onclick="increaseDhikrCount()">زيادة</button>
-                </div>
-                <p id="dhikr-details">
-                    عدد الأذكار: <span id="dhikr-number">0</span> / 33
-                </p>
-            </div>
-        </section>
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-        }
 
         <section id="quotes">
             <h2>اقتباسات دينية</h2>
             <div id="quote">قال رسول الله صلى الله عليه وسلم: "خيركم من تعلم القرآن وعلمه."</div>
         </section>
-        .background-blur {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for better text visibility */
-            backdrop-filter: blur(8px); /* Reduced blur effect to 8px */
-            z-index: 1;
-        }
 
         <section id="calendar">
             <h2>التقويم الهجري</h2>
             <div id="hijri-calendar">جاري تحميل التاريخ الهجري...</div>
         </section>
-        .text {
-            position: relative;
-            font-size: 3em;
-            color: red;
-            text-shadow: 
-                0 0 5px red, 
-                0 0 10px red, 
-                0 0 15px red, 
-                0 0 20px red, 
-                0 0 25px red, 
-                0 0 30px red, 
-                0 0 35px red;
-            animation: glow 1.5s infinite, glitch 3s infinite; /* Slow down the glitch effect */
-            z-index: 2;
-        }
 
         <section id="prayer-times">
             <h2>مواقيت الصلاة</h2>
@@ -160,69 +173,40 @@
                 <div id="isha-time">العشاء: جارٍ التحميل...</div>
             </div>
         </section>
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 25px red, 0 0 30px red, 0 0 35px red; }
-            50% { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red; }
-            100% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 25px red, 0 0 30px red, 0 0 35px red; }
-        }
 
         <section id="calligraphy">
            <h2>اية اليوم</h2>
             <canvas id="calligraphy-canvas" width="600" height="300"></canvas>
         </section>
-        @keyframes glitch {
-            0% { transform: translate(0, 0); }
-            20% { transform: translate(-5px, -5px); }
-            40% { transform: translate(5px, 5px); }
-            60% { transform: translate(-5px, 5px); }
-            80% { transform: translate(5px, -5px); }
-            100% { transform: translate(0, 0); }
-        }
 
-        <main>
-            <!-- Existing sections -->
-    
-            <section id="islamic-games">
-                <h2>الألعاب الإسلامية</h2>
-                <div class="game-container">
-                    <p id="question">ما هو اسم النبي الذي ابتلعه الحوت؟</p>
-                    <input type="text" id="user-answer" placeholder="أدخل الإجابة هنا">
-                    <button onclick="checkAnswer()">تحقق الإجابة</button>
-                    <p id="feedback" class="feedback"></p>
-                </div>
-            </section>
-    
-            <!-- Other existing sections -->
-        </main>
+        <section id="islamic-games">
+            <h2>الألعاب الإسلامية</h2>
+            <div class="game-container">
+                <p id="question">ما هو اسم النبي الذي ابتلعه الحوت؟</p>
+                <input type="text" id="user-answer" placeholder="أدخل الإجابة هنا">
+                <button onclick="checkAnswer()">تحقق الإجابة</button>
+                <p id="feedback" class="feedback"></p>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>تواصل معنا</h2>
-            <p>للتواصل معنا، يرجى إرسال بريد إلكتروني إلى: <a href="oualeedkhanouche@gmail.com">oualeedkhanouche@gmail.com</a></p>
+            <p>للتواصل معنا، يرجى إرسال بريد إلكتروني إلى: <a href="mailto:oualeedkhanouche@gmail.com">oualeedkhanouche@gmail.com</a></p>
         </section>
-        @keyframes oceanMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="background-blur"></div>
-        <div class="text">
-            Hacked by 0xCrypticPwn3r
-        </div>
-    </div>
 
         <section id="about">
             <h2>من نحن</h2>
             <p>مجرد شاب مسلم جاهل يسعى للمعرفة و العلم و أيضا كسب رضا الله جل جلاله</p>
         </section>
     </main>
-    <!-- Background Music -->
-    <audio id="background-music" src="C:\Users\0xCrypticPwn3r\Desktop\videoplayback.mp3" autoplay loop></audio>
 
     <footer>
         <p>&copy; 2024 منصة وليد الإسلامية. جميع الحقوق محفوظة.</p>
     </footer>
+
+    <!-- Background Music -->
+    <audio id="background-music" src="path_to_music.mp3" autoplay loop></audio>
+
     <script>
         // Ensure the audio starts playing when the page loads
         window.addEventListener('load', function() {
